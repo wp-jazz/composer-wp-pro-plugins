@@ -3,6 +3,12 @@
 	"description": "Composer Installer for commercial WordPress Plugins.",
 	"type": "composer-plugin",
 	"license": "MIT",
+	"keywords": [
+		"composer",
+		"edd",
+		"wordpress",
+		"wp"
+	],
 	"require": {
 		"composer-plugin-api": "^1.0 || ^2.0",
 		"composer/semver": "^1.0 || ^2.0 || ^3.0",
@@ -31,6 +37,11 @@
 			"homepage" : "https://github.com/wp-jazz/composer-wp-pro-plugins/graphs/contributors"
 		}
 	],
+	"support": {
+		"source": "https://github.com/wp-jazz/composer-wp-pro-plugins",
+		"issues": "https://github.com/wp-jazz/composer-wp-pro-plugins/issues",
+		"security": "https://github.com/wp-jazz/composer-wp-pro-plugins/security/policy"
+	},
 	"autoload": {
 		"psr-4": {
 			"Jazz\\Composer\\WPProPlugins\\": "src/"
