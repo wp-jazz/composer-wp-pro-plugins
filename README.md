@@ -431,6 +431,12 @@ The following add-ons are supported:
 * `junaidbhura/wpml-wp-seo-multilingual`
 * `junaidbhura/wpml-wpforms`
 
+## Resources
+
+* [Code of Conduct](https://github.com/wp-jazz/.github/blob/main/CODE_OF_CONDUCT.md)
+* [Contribution Guide](https://github.com/wp-jazz/.github/blob/main/CONTRIBUTING.md)
+* [Security Policy](https://github.com/wp-jazz/.github/blob/main/SECURITY.md)
+
 ---
 
 <p align="center">🎷</p>
