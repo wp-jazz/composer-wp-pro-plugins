@@ -26,6 +26,6 @@ parameters:
 			path: ../../src/Http.php
 
 		-
-			message: "#^Parameter \\$curl_handle of method Junaidbhura\\\\Composer\\\\WPProPlugins\\\\Http\\:\\:request\\(\\) has invalid type CurlHandle\\.$#"
+			message: "#^Parameter \\$curl_handle of method Jazz\\\\Composer\\\\WPProPlugins\\\\Http\\:\\:request\\(\\) has invalid type CurlHandle\\.$#"
 			count: 1
 			path: ../../src/Http.php

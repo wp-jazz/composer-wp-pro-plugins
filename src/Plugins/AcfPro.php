@@ -1,14 +1,9 @@
 <?php
-/**
- * ACF Pro Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
 /**
- * AcfPro class.
+ * Downloader for Advanced Custom Fields Pro
  */
 class AcfPro extends AbstractPlugin {
 

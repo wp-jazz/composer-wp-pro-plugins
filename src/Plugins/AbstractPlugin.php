@@ -1,14 +1,9 @@
 <?php
-/**
- * Abstract Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
 /**
- * AbstractPlugin class.
+ * Abstract Downloader for WordPress Plugins
  */
 abstract class AbstractPlugin {
 
@@ -17,24 +12,33 @@ abstract class AbstractPlugin {
 	 *
 	 * @var string
 	 */
-	protected $version = '';
+	protected $version;
 
 	/**
 	 * The name of the plugin to download.
 	 *
 	 * @var string
 	 */
-	protected $slug = '';
+	protected $slug;
+
+	/**
+	 * The name of the package vendor.
+	 *
+	 * @var string
+	 */
+	protected $vendor;
 
 	/**
 	 * AbstractPlugin constructor.
 	 *
 	 * @param string $version
 	 * @param string $slug
+	 * @param string $vendor
 	 */
-	public function __construct( $version = '', $slug = '' ) {
+	public function __construct( $version, $slug, $vendor ) {
 		$this->version = $version;
 		$this->slug    = $slug;
+		$this->vendor  = $vendor;
 	}
 
 	/**
@@ -50,7 +54,7 @@ abstract class AbstractPlugin {
 	 * @return string
 	 */
 	protected function getPackageName() {
-		return 'junaidbhura/' . $this->slug;
+		return $this->vendor . '/' . $this->slug;
 	}
 
 }

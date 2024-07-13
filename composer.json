@@ -1,7 +1,14 @@
 {
-	"name": "junaidbhura/composer-wp-pro-plugins",
+	"name": "wp-jazz/composer-wp-pro-plugins",
+	"description": "Composer Installer for commercial WordPress Plugins.",
 	"type": "composer-plugin",
 	"license": "MIT",
+	"keywords": [
+		"composer",
+		"edd",
+		"wordpress",
+		"wp"
+	],
 	"require": {
 		"composer-plugin-api": "^1.0 || ^2.0",
 		"composer/semver": "^1.0 || ^2.0 || ^3.0",
@@ -11,19 +18,37 @@
 		"composer/composer": "^1.0.0 || ^2.0.0",
 		"phpstan/phpstan": "^1.10"
 	},
+	"replace": {
+		"junaidbhura/composer-wp-pro-plugins": "*"
+	},
 	"authors": [
 		{
 			"name": "Junaid Bhura",
-			"email": "info@junaidbhura.com"
+			"email": "info@junaidbhura.com",
+			"role": "Former lead"
+		},
+		{
+			"name": "Chauncey McAskill",
+			"email": "chauncey@mcaskill.ca",
+			"role": "Current lead"
+		},
+		{
+			"name" : "Contributors",
+			"homepage" : "https://github.com/wp-jazz/composer-wp-pro-plugins/graphs/contributors"
 		}
 	],
+	"support": {
+		"source": "https://github.com/wp-jazz/composer-wp-pro-plugins",
+		"issues": "https://github.com/wp-jazz/composer-wp-pro-plugins/issues",
+		"security": "https://github.com/wp-jazz/composer-wp-pro-plugins/security/policy"
+	},
 	"autoload": {
 		"psr-4": {
-			"Junaidbhura\\Composer\\WPProPlugins\\": "src/"
+			"Jazz\\Composer\\WPProPlugins\\": "src/"
 		}
 	},
 	"extra": {
-		"class": "Junaidbhura\\Composer\\WPProPlugins\\Installer",
+		"class": "Jazz\\Composer\\WPProPlugins\\Installer",
 		"plugin-modifies-downloads": true
 	},
 	"scripts": {

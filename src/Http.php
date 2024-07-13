@@ -1,16 +1,11 @@
 <?php
-/**
- * Http Wrapper.
- *
- * @package Junaidbhura\Composer\WPProPlugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins;
+namespace Jazz\Composer\WPProPlugins;
 
 use RuntimeException;
 
 /**
- * Http class.
+ * HTTP Client Operator
  */
 class Http {
 

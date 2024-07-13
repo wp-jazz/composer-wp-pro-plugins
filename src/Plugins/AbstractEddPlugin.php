@@ -1,18 +1,13 @@
 <?php
-/**
- * Abstract Easy Digital Downloads (EDD) Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
 use Composer\Semver\Semver;
 use Exception;
 use UnexpectedValueException;
 
 /**
- * AbstractEddPlugin class.
+ * Abstract Downloader for Easy Digital Downloads (EDD) Plugins
  */
 abstract class AbstractEddPlugin extends AbstractPlugin {
 

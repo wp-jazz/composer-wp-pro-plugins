@@ -1,17 +1,12 @@
 <?php
-/**
- * Custom RemoteFilesystem.
- *
- * @package Junaidbhura\Composer\WPProPlugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins;
+namespace Jazz\Composer\WPProPlugins;
 
 use Composer\Config;
 use Composer\IO\IOInterface;
 
 /**
- * Custom RemoteFilesystem Class.
+ * Custom Remote Filesystem Operator
  */
 class RemoteFilesystem extends \Composer\Util\RemoteFilesystem {
 

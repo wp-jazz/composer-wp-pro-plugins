@@ -1,6 +1,10 @@
-# Composer Installer for Pro WordPress Plugins.
+# Composer Installer for Commercial WordPress Plugins
 
-A Composer plugin that makes it easy to install commercial WordPress plugins.
+> [!NOTE]
+> This package serves as the continuation of the now abandoned
+> [junaidbhura/composer-wp-pro-plugins package which was created by Junaid Bhura](https://github.com/junaidbhura/composer-wp-pro-plugins).
+
+A Composer plugin that makes it easy to install commercial WordPress plugins and add-ons.
 
 Sensitive credentials (license keys, tokens) are read from environment variables or a `.env` file.
 
@@ -36,7 +40,7 @@ This Composer plugin requires [Composer](https://getcomposer.org/):
 * 1.0.0 and newer, or
 * 2.0.2 and newer
 * 2.3+ IMPORTANT: Make sure to add trailing slashes to packages' `dist` URL as below.
-  More info: https://github.com/junaidbhura/composer-wp-pro-plugins/issues/34
+  More info: [junaidbhura/composer-wp-pro-plugins#34](https://github.com/junaidbhura/composer-wp-pro-plugins/issues/34)
 
 Create a `.env` file in the root of your WordPress site, where the `composer.json` file lives,
 which has all the license keys and settings:
@@ -79,7 +83,7 @@ Add the following to your composer.json file:
 				"url": "https://www.acf-extended.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -94,7 +98,7 @@ Add the following to your composer.json file:
 				"url": "https://www.advancedcustomfields.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -109,7 +113,7 @@ Add the following to your composer.json file:
 				"url": "https://www.gravityforms.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -124,7 +128,7 @@ Add the following to your composer.json file:
 				"url": "https://www.gravityforms.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -139,7 +143,7 @@ Add the following to your composer.json file:
 				"url": "https://ninjaforms.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -154,7 +158,7 @@ Add the following to your composer.json file:
 				"url": "https://www.polylang.pro/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -169,7 +173,7 @@ Add the following to your composer.json file:
 				"url": "https://publishpress.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -184,7 +188,7 @@ Add the following to your composer.json file:
 				"url": "https://www.wpallimport.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -199,7 +203,7 @@ Add the following to your composer.json file:
 				"url": "https://www.wpallimport.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -214,7 +218,7 @@ Add the following to your composer.json file:
 				"url": "https://www.wpallimport.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -229,7 +233,7 @@ Add the following to your composer.json file:
 				"url": "https://www.wpallimport.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -244,7 +248,7 @@ Add the following to your composer.json file:
 				"url": "https://www.wpallimport.com/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -259,7 +263,7 @@ Add the following to your composer.json file:
 				"url": "https://wpml.org/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	},
@@ -274,7 +278,7 @@ Add the following to your composer.json file:
 				"url": "https://wpml.org/"
 			},
 			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
+				"wp-jazz/composer-wp-pro-plugins": "*"
 			}
 		}
 	}
@@ -426,3 +430,13 @@ The following add-ons are supported:
 * `junaidbhura/wpml-woocommerce-multilingual`
 * `junaidbhura/wpml-wp-seo-multilingual`
 * `junaidbhura/wpml-wpforms`
+
+## Resources
+
+* [Code of Conduct](https://github.com/wp-jazz/.github/blob/main/CODE_OF_CONDUCT.md)
+* [Contribution Guide](https://github.com/wp-jazz/.github/blob/main/CONTRIBUTING.md)
+* [Security Policy](https://github.com/wp-jazz/.github/blob/main/SECURITY.md)
+
+---
+
+<p align="center">🎷</p>

@@ -1,16 +1,11 @@
 <?php
-/**
- * Polylang Pro Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
-use Junaidbhura\Composer\WPProPlugins\Http;
+use Jazz\Composer\WPProPlugins\Http;
 
 /**
- * PolylangPro class.
+ * Downloader for Polylang Pro
  */
 class PolylangPro extends AbstractEddPlugin {
 

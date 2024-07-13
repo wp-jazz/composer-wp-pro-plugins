@@ -1,29 +1,14 @@
 <?php
-/**
- * PublishPress Pro Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
-use Junaidbhura\Composer\WPProPlugins\Http;
+use Jazz\Composer\WPProPlugins\Http;
 use InvalidArgumentException;
 
 /**
- * PublishPressPro class.
+ * Downloader for PublishPress Pro and Add-Ons
  */
 class PublishPressPro extends AbstractEddPlugin {
-
-	/**
-	 * WpAiPro constructor.
-	 *
-	 * @param string $version
-	 * @param string $slug
-	 */
-	public function __construct( $version = '', $slug = 'publishpress-planner-pro' ) {
-		parent::__construct( $version, $slug );
-	}
 
 	/**
 	 * Get the download URL for this plugin from its API.

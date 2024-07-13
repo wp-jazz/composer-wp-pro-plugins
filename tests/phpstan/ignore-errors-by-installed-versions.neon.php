@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Conditional baselines and configurations for PHPStan
+ *
  * Resolves additional baselines and configurations to apply to PHPStan's
  * analysis based on the version of PHP, Composer, and the project's packages.
  *
