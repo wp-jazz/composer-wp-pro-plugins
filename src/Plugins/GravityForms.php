@@ -13,16 +13,6 @@ use UnexpectedValueException;
 class GravityForms extends AbstractPlugin {
 
 	/**
-	 * GravityForms constructor.
-	 *
-	 * @param string $version
-	 * @param string $slug
-	 */
-	public function __construct( $version = '', $slug = 'gravityforms' ) {
-		parent::__construct( $version, $slug );
-	}
-
-	/**
 	 * Get the download URL for this plugin.
 	 *
 	 * @throws UnexpectedValueException If the response is invalid or versions do not match.

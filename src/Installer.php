@@ -11,7 +11,6 @@ use Composer\Package\PackageInterface;
 use Composer\Plugin\PluginEvents;
 use Composer\Plugin\PluginInterface;
 use Composer\Plugin\PreFileDownloadEvent;
-use Composer\Plugin\PrePoolCreateEvent;
 use Dotenv\Dotenv;
 
 /**
@@ -143,15 +142,19 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 		}
 
 		$download_url = $this->getDownloadUrl( $package );
-		if ( ! empty( $download_url ) ) {
-			$this->downloadUrl = $download_url;
-
-			$dist_url = $package->getDistUrl();
-			if ( is_string( $dist_url ) ) {
-				$filtered_url = $this->filterDistUrl( $dist_url, $package );
-				$package->setDistUrl( $filtered_url );
-			}
+		if ( ! $download_url ) {
+			return;
 		}
+
+		$this->downloadUrl = $download_url;
+
+		$dist_url = $package->getDistUrl();
+		if ( ! is_string( $dist_url ) ) {
+			return;
+		}
+
+		$filtered_url = $this->filterDistUrl( $dist_url, $package );
+		$package->setDistUrl( $filtered_url );
 	}
 
 	/**
@@ -205,13 +208,15 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 		$processed_url = $event->getProcessedUrl();
 		$download_url  = $this->getDownloadUrl( $package );
 
-		if ( $download_url ) {
-			$filtered_url = $this->filterDistUrl( $processed_url, $package );
-
-			$event->setProcessedUrl( $download_url );
-			$event->setCustomCacheKey( $filtered_url );
-			$package->setDistUrl( $filtered_url );
+		if ( ! $download_url ) {
+			return;
 		}
+
+		$filtered_url = $this->filterDistUrl( $processed_url, $package );
+
+		$event->setProcessedUrl( $download_url );
+		$event->setCustomCacheKey( $filtered_url );
+		$package->setDistUrl( $filtered_url );
 	}
 
 	/**
@@ -242,47 +247,52 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 	 * @return ?string The plugin download URL.
 	 */
 	protected function getDownloadUrl( PackageInterface $package ) {
-		$plugin       = null;
 		$package_name = $package->getName();
-		$plugin_name  = str_replace( 'junaidbhura/', '', $package_name );
+		if ( ! preg_match( '^(junaidbhura)/(.+)$', $package_name, $matches ) ) {
+			return null;
+		}
 
-		switch ( $package_name ) {
-			case 'junaidbhura/acf-extended-pro':
-				$plugin = new Plugins\AcfExtendedPro( $package->getPrettyVersion(), $plugin_name );
+		$vendor_name = $matches[1];
+		$plugin_name = $matches[2];
+
+		$plugin = null;
+		switch ( $plugin_name ) {
+			case 'acf-extended-pro':
+				$plugin = new Plugins\AcfExtendedPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
 				break;
 
-			case 'junaidbhura/advanced-custom-fields-pro':
-				$plugin = new Plugins\AcfPro( $package->getPrettyVersion(), $plugin_name );
+			case 'advanced-custom-fields-pro':
+				$plugin = new Plugins\AcfPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
 				break;
 
-			case 'junaidbhura/polylang-pro':
-				$plugin = new Plugins\PolylangPro( $package->getPrettyVersion(), $plugin_name );
+			case 'polylang-pro':
+				$plugin = new Plugins\PolylangPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
 				break;
 
-			case 'junaidbhura/wp-all-import-pro':
-			case 'junaidbhura/wp-all-export-pro':
-				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $plugin_name );
+			case 'wp-all-import-pro':
+			case 'wp-all-export-pro':
+				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
 				break;
 
 			default:
-				if ( 0 === strpos( $package_name, 'junaidbhura/gravityforms' ) ) {
-					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), $plugin_name );
-				} elseif ( 0 === strpos( $package_name, 'junaidbhura/ninja-forms-' ) ) {
-					$plugin = new Plugins\NinjaForms( $package->getPrettyVersion(), $plugin_name );
-				} elseif ( 0 === strpos( $package_name, 'junaidbhura/publishpress-' ) ) {
-					$plugin = new Plugins\PublishPressPro( $package->getPrettyVersion(), $plugin_name );
-				} elseif ( 0 === strpos( $package_name, 'junaidbhura/wpai-' ) || 0 === strpos( $package_name, 'junaidbhura/wpae-' ) ) {
-					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $plugin_name );
-				} elseif ( 0 === strpos( $package_name, 'junaidbhura/wpml-' ) ) {
-					$plugin = new Plugins\Wpml( $package->getPrettyVersion(), $plugin_name );
+				if ( 0 === strpos( $package_name, 'gravityforms' ) ) {
+					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), $plugin_name, $vendor_name );
+				} elseif ( 0 === strpos( $package_name, 'ninja-forms-' ) ) {
+					$plugin = new Plugins\NinjaForms( $package->getPrettyVersion(), $plugin_name, $vendor_name );
+				} elseif ( 0 === strpos( $package_name, 'publishpress-' ) ) {
+					$plugin = new Plugins\PublishPressPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
+				} elseif ( 0 === strpos( $package_name, 'wpai-' ) || 0 === strpos( $package_name, 'wpae-' ) ) {
+					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $plugin_name, $vendor_name );
+				} elseif ( 0 === strpos( $package_name, 'wpml-' ) ) {
+					$plugin = new Plugins\Wpml( $package->getPrettyVersion(), $plugin_name, $vendor_name );
 				}
 		}
 
-		if ( ! empty( $plugin ) ) {
-			return $plugin->getDownloadUrl();
+		if ( ! $plugin ) {
+			return null;
 		}
 
-		return null;
+		return $plugin->getDownloadUrl();
 	}
 
 }

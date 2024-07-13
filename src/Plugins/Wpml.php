@@ -10,16 +10,6 @@ use InvalidArgumentException;
 class Wpml extends AbstractPlugin {
 
 	/**
-	 * Wpml constructor.
-	 *
-	 * @param string $version
-	 * @param string $slug
-	 */
-	public function __construct( $version = '', $slug = 'wpml-sitepress-multilingual-cms' ) {
-		parent::__construct( $version, $slug );
-	}
-
-	/**
 	 * Get the download URL for this plugin.
 	 *
 	 * @throws InvalidArgumentException If the package is unsupported.

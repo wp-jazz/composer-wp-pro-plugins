@@ -10,16 +10,6 @@ use Junaidbhura\Composer\WPProPlugins\Http;
 class WpAiPro extends AbstractEddPlugin {
 
 	/**
-	 * WpAiPro constructor.
-	 *
-	 * @param string $version
-	 * @param string $slug
-	 */
-	public function __construct( $version = '', $slug = 'wp-all-import-pro' ) {
-		parent::__construct( $version, $slug );
-	}
-
-	/**
 	 * Get the download URL for this plugin from its API.
 	 *
 	 * @return string
