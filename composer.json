@@ -1,5 +1,6 @@
 {
-	"name": "junaidbhura/composer-wp-pro-plugins",
+	"name": "wp-jazz/composer-wp-pro-plugins",
+	"description": "Composer Installer for commercial WordPress Plugins.",
 	"type": "composer-plugin",
 	"license": "MIT",
 	"require": {
@@ -11,10 +12,23 @@
 		"composer/composer": "^1.0.0 || ^2.0.0",
 		"phpstan/phpstan": "^1.10"
 	},
+	"replace": {
+		"junaidbhura/composer-wp-pro-plugins": "*"
+	},
 	"authors": [
 		{
 			"name": "Junaid Bhura",
-			"email": "info@junaidbhura.com"
+			"email": "info@junaidbhura.com",
+			"role": "Former lead"
+		},
+		{
+			"name": "Chauncey McAskill",
+			"email": "chauncey@mcaskill.ca",
+			"role": "Current lead"
+		},
+		{
+			"name" : "Contributors",
+			"homepage" : "https://github.com/wp-jazz/composer-wp-pro-plugins/graphs/contributors"
 		}
 	],
 	"autoload": {

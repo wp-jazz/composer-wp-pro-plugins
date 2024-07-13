@@ -248,7 +248,7 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 	 */
 	protected function getDownloadUrl( PackageInterface $package ) {
 		$package_name = $package->getName();
-		if ( ! preg_match( '^(junaidbhura)/(.+)$', $package_name, $matches ) ) {
+		if ( ! preg_match( '^(junaidbhura|wp-jazz)/(.+)$', $package_name, $matches ) ) {
 			return null;
 		}
 
