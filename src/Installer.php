@@ -1,9 +1,4 @@
 <?php
-/**
- * Composer Installer for Pro WordPress Plugins.
- *
- * @package Junaidbhura\Composer\WPProPlugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins;
 
@@ -20,7 +15,7 @@ use Composer\Plugin\PrePoolCreateEvent;
 use Dotenv\Dotenv;
 
 /**
- * Custom Installer Class.
+ * Composer Installer for Commercial WordPress Plugins
  */
 class Installer implements PluginInterface, EventSubscriberInterface {
 

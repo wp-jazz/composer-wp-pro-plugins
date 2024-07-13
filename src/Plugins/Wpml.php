@@ -1,16 +1,11 @@
 <?php
-/**
- * WPML Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins\Plugins;
 
 use InvalidArgumentException;
 
 /**
- * Wpml class.
+ * Downloader for WPML and Add-ons
  */
 class Wpml extends AbstractPlugin {
 

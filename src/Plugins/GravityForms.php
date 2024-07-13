@@ -1,9 +1,4 @@
 <?php
-/**
- * Gravity Forms Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins\Plugins;
 
@@ -13,7 +8,7 @@ use Junaidbhura\Composer\WPProPlugins\Http;
 use UnexpectedValueException;
 
 /**
- * GravityForms class.
+ * Downloader for Gravity Forms and Add-Ons
  */
 class GravityForms extends AbstractPlugin {
 

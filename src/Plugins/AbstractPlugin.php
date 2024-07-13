@@ -1,14 +1,9 @@
 <?php
-/**
- * Abstract Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins\Plugins;
 
 /**
- * AbstractPlugin class.
+ * Abstract Downloader for WordPress Plugins
  */
 abstract class AbstractPlugin {
 

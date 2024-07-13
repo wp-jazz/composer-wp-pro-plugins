@@ -1,9 +1,4 @@
 <?php
-/**
- * PublishPress Pro Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins\Plugins;
 
@@ -11,7 +6,7 @@ use Junaidbhura\Composer\WPProPlugins\Http;
 use InvalidArgumentException;
 
 /**
- * PublishPressPro class.
+ * Downloader for PublishPress Pro and Add-Ons
  */
 class PublishPressPro extends AbstractEddPlugin {
 

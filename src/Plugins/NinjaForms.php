@@ -1,9 +1,4 @@
 <?php
-/**
- * Ninja Forms Plugin.
- *
- * @package Junaidbhura\Composer\WPProPlugins\Plugins
- */
 
 namespace Junaidbhura\Composer\WPProPlugins\Plugins;
 
@@ -11,7 +6,7 @@ use Junaidbhura\Composer\WPProPlugins\Http;
 use InvalidArgumentException;
 
 /**
- * NinjaForms class.
+ * Downloader for Ninja Forms and Add-Ons
  */
 class NinjaForms extends AbstractEddPlugin {
 
