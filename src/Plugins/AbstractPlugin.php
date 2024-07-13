@@ -1,6 +1,6 @@
 <?php
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
 /**
  * Abstract Downloader for WordPress Plugins

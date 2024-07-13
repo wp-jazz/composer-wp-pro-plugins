@@ -33,11 +33,11 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"Junaidbhura\\Composer\\WPProPlugins\\": "src/"
+			"Jazz\\Composer\\WPProPlugins\\": "src/"
 		}
 	},
 	"extra": {
-		"class": "Junaidbhura\\Composer\\WPProPlugins\\Installer",
+		"class": "Jazz\\Composer\\WPProPlugins\\Installer",
 		"plugin-modifies-downloads": true
 	},
 	"scripts": {

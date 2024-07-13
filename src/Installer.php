@@ -1,6 +1,6 @@
 <?php
 
-namespace Junaidbhura\Composer\WPProPlugins;
+namespace Jazz\Composer\WPProPlugins;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;

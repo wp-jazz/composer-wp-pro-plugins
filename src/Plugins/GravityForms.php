@@ -1,10 +1,10 @@
 <?php
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
 use Composer\Semver\Semver;
 use Exception;
-use Junaidbhura\Composer\WPProPlugins\Http;
+use Jazz\Composer\WPProPlugins\Http;
 use UnexpectedValueException;
 
 /**

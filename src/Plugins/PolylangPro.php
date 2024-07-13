@@ -1,8 +1,8 @@
 <?php
 
-namespace Junaidbhura\Composer\WPProPlugins\Plugins;
+namespace Jazz\Composer\WPProPlugins\Plugins;
 
-use Junaidbhura\Composer\WPProPlugins\Http;
+use Jazz\Composer\WPProPlugins\Http;
 
 /**
  * Downloader for Polylang Pro
