@@ -6,7 +6,6 @@ Sensitive credentials (license keys, tokens) are read from environment variables
 
 ## Supported Plugins
 
-1. Advanced Custom Fields Pro
 1. Ninja Forms Add-Ons
 1. Gravity Forms / Add-Ons
 1. Polylang Pro
@@ -16,6 +15,10 @@ Sensitive credentials (license keys, tokens) are read from environment variables
 1. WPML
 
 ## Overview
+
+> ⚠️ Note: Advanced Custom Fields Pro is no longer supported by this package.
+>
+> We encourage you to migrate to the [official ACF Composer repository](https://www.advancedcustomfields.com/resources/installing-acf-pro-with-composer/).
 
 > ⚠️ Note: Most EDD plugins, and Gravity Forms, only allow downloading the latest versions
 > of their plugins, even if you request for a specific version.
@@ -77,21 +80,6 @@ Add the following to your composer.json file:
 			"dist": {
 				"type": "zip",
 				"url": "https://www.acf-extended.com/"
-			},
-			"require": {
-				"junaidbhura/composer-wp-pro-plugins": "*"
-			}
-		}
-	},
-	{
-		"type": "package",
-		"package": {
-			"name": "junaidbhura/advanced-custom-fields-pro",
-			"version": "<version_number>",
-			"type": "wordpress-plugin",
-			"dist": {
-				"type": "zip",
-				"url": "https://www.advancedcustomfields.com/"
 			},
 			"require": {
 				"junaidbhura/composer-wp-pro-plugins": "*"
@@ -281,7 +269,6 @@ Add the following to your composer.json file:
 ],
 "require": {
 	"junaidbhura/acf-extended-pro": "*",
-	"junaidbhura/advanced-custom-fields-pro": "*",
 	"junaidbhura/gravityforms": "*",
 	"junaidbhura/gravityformspolls": "*",
 	"junaidbhura/ninja-forms-uploads": "*",

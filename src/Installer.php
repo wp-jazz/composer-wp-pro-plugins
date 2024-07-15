@@ -256,10 +256,6 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 				$plugin = new Plugins\AcfExtendedPro( $package->getPrettyVersion(), $plugin_name );
 				break;
 
-			case 'junaidbhura/advanced-custom-fields-pro':
-				$plugin = new Plugins\AcfPro( $package->getPrettyVersion(), $plugin_name );
-				break;
-
 			case 'junaidbhura/polylang-pro':
 				$plugin = new Plugins\PolylangPro( $package->getPrettyVersion(), $plugin_name );
 				break;
